@@ -1,4 +1,5 @@
 "use client";
+import LoginComponent from "@/components/login-compoent";
 import { Button } from "@/components/ui/button";
 import { DEFAULT_LOGIN_REDIRECT } from "@/route";
 import { signIn } from "next-auth/react";
@@ -12,15 +13,8 @@ const LoginPage = () => {
         })
     }
     return (
-    <div>
-      <Button
-            size="lg"
-            className="w-[50%]"
-            variant="outline"
-            onClick={()=>onClick("github")}
-            >
-                <FaGithub className=""/>
-            </Button>
+    <div className="sm:h-[50vh] h-[45vh] flex justify-center items-center">
+      <LoginComponent/>
     </div>
   )
 };
