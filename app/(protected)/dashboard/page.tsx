@@ -1,4 +1,5 @@
 import { auth, signOut } from "@/auth";
+import NavbarDashboard from "@/components/navbar-dashboard";
 import { Button } from "@/components/ui/button";
 
 const DashboardPage = async() => {
@@ -8,23 +9,22 @@ const DashboardPage = async() => {
         return;
     }
     const imageUrl=session?.user.image;
+    const userName=session.user.name;
+    if(!userName)
+    {
+        return;
+    }
+    if(!imageUrl )
+    {
+        return;
+    }
     return(
-        <div>
-            Settings Page 
-            <br />
-            <br />
-            {JSON.stringify(session)};
-            <br />
-            <img src={imageUrl} alt="" />
-            <form action={async()=>{
-                "use server";
-                await signOut();
-            }}>
-                <Button type="submit" variant="destructive">
-                    Sign Out
-                </Button>
-            </form>
-        </div>
+       <>
+       <NavbarDashboard
+       imageUrl={imageUrl}
+       userName={userName}
+       />
+       </>
     )
 };
 
