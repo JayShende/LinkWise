@@ -1,6 +1,8 @@
-import { auth, signOut } from "@/auth";
+
+import { auth } from "@/auth";
 import NavbarDashboard from "@/components/navbar-dashboard";
-import { Button } from "@/components/ui/button";
+
+
 
 const DashboardPage = async() => {
     const session=await auth();
@@ -24,6 +26,7 @@ const DashboardPage = async() => {
        imageUrl={imageUrl}
        userName={userName}
        />
+
        </>
     )
 };

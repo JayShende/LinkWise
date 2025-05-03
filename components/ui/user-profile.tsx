@@ -1,4 +1,4 @@
-
+"use client";
 import Image from "next/image";
 
 interface userProfileProps {
@@ -22,10 +22,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { signOut } from "next-auth/react";
 
-
 export function UserProfile({ url, userName }: userProfileProps) {
-
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -42,18 +39,19 @@ export function UserProfile({ url, userName }: userProfileProps) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup className="px-0 ">
           <DropdownMenuItem className="flex items-center  gap-x-2">
-            <IoHome className="text-muted-foreground"/> Home
+            <IoHome className="text-muted-foreground" /> Home
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <form action={async()=>{
-                "use server";
-                await signOut();
-            }}>
-       <DropdownMenuItem className="flex items-center gap-x-2">
-        <TbLogout2  className="text-red-600"/> Logout
-          </DropdownMenuItem>
-       </form>
+        <DropdownMenuItem className="flex items-center gap-x-2">
+         
+            <button type="submit"
+            onClick={()=>signOut()}
+            >
+              <TbLogout2 className="text-red-600" /> Logout
+            </button>
+         
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
