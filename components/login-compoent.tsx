@@ -1,37 +1,32 @@
 "use client";
 
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { LiaUnlinkSolid } from "react-icons/lia";
 import { FaGithub } from "react-icons/fa";
 import { Button } from "./ui/button";
 import { signIn } from "next-auth/react";
 import { DEFAULT_LOGIN_REDIRECT } from "@/route";
 const LoginComponent = () => {
-  
-  function loginGithub(provider:"github"){
-          signIn(provider,{
-              callbackUrl:DEFAULT_LOGIN_REDIRECT
-          })
-      }
-    return (
+  function loginGithub(provider: "github") {
+    signIn(provider, {
+      callbackUrl: DEFAULT_LOGIN_REDIRECT,
+    });
+  }
+  return (
     <Card className="w-[350px]">
       <CardHeader>
         <LiaUnlinkSolid className="text-2xl " />
         <CardTitle>Sign In to LinkWise</CardTitle>
         <CardDescription>Welcome back! Sign in to continue</CardDescription>
-        
-        <Button className="w-full my-2 cursor-pointer"
-        variant="secondary"
-       onClick={()=>{
-        loginGithub("github")
-       }}
+
+        <Button
+          className="w-full my-2 cursor-pointer"
+          variant="secondary"
+          onClick={() => {
+            loginGithub("github");
+          }}
         >
-          <FaGithub /> 
+          <FaGithub />
           <span>Github</span>
         </Button>
       </CardHeader>

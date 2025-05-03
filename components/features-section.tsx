@@ -12,7 +12,9 @@ const poppinsFont = Poppins({
 
 const FeaturesSection = () => {
   return (
-    <div className=" flex flex-col sm:my-28 my-20">
+    <div className=" flex flex-col sm:my-28 my-20"
+    id="#features"
+    >
         <span className={cn("text-center text-3xl text-gray-900 sm:mb-4 mb-10 font-bold",poppinsFont.className)}>
             Features
         </span>

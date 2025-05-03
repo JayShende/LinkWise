@@ -12,6 +12,8 @@ const interFont=Inter({
     subsets:["latin"],
     weight: ["400", "500", "600", "700"],
 })
+
+
 const HeroSection = () => {
   return (
     <div className="my-8 flex flex-col justify-center items-center sm:gap-y-8 gap-y-5">

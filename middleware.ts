@@ -15,7 +15,6 @@ export default auth((req) => {
 //   console.log("Is Logged in ",isLoggedIn)
 
     const {nextUrl}=req;
-    console.log(nextUrl);
     const isLoggedin= !!req.auth;
 
     const isApiAuthRoute=nextUrl.pathname.startsWith(apiAuthPrefix);
