@@ -14,7 +14,7 @@ const AllLinksComponent = () => {
   }
 
   return (
-    <div className="sm:w-[500px] w-[300px] mt-5 p-5 h-auto overflow-y-scroll">
+    <div className="sm:w-[500px] w-[350px] mt-5 p-5 h-auto overflow-y-scroll">
       {links.map((x) => (
         <LinkPreviewComponent
           slug={x.slug}

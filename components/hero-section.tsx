@@ -18,7 +18,6 @@ const interFont=Inter({
 
 
 const HeroSection = () => {
- const [inputLink, setInputLink] = useState("");
   const router=useRouter();
   function ClickMe()
   {

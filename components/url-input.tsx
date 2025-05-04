@@ -20,9 +20,9 @@ const UrlInput: React.FC<UrlInputProps> = ({
     return;
   }
   return (
-    <div className="flex w-full max-w-sm items-center space-x-2">
+    <div className="flex w-full max-w-sm items-center justify-center space-x-2">
       <Input type="url" 
-      className="sm:w-[500px] w-[230px]"
+      className="sm:w-[500px] w-[230px] "
       placeholder="Enter Your URL" 
       onChange={(event)=>{
         setInpuLink(event.target.value);
