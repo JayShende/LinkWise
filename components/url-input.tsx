@@ -9,11 +9,11 @@ interface UrlInputProps{
   onCLickFun:()=>void
 }
 
-const UrlInput = ({
-  setInpuLink,
+const UrlInput: React.FC<UrlInputProps> = ({
+  setInpuLink = () => {},           // default: no-op function
+  isDisabled = false,                // default: false
   onCLickFun,
-  isDisabled
-}:UrlInputProps) => {
+}) => {
 
   if(!setInpuLink)
   {
