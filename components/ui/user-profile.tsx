@@ -43,14 +43,13 @@ export function UserProfile({ url, userName }: userProfileProps) {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="flex items-center gap-x-2">
-         
-            <button type="submit"
-            onClick={()=>signOut()}
+        <DropdownMenuItem >
+          <button type="submit" onClick={() => signOut()}
+            className="flex  gap-x-2 items-center"
             >
-              <TbLogout2 className="text-red-600" /> Logout
-            </button>
-         
+            <TbLogout2 className="text-red-600" />
+            <span>Logout</span>
+          </button>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

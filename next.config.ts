@@ -10,4 +10,8 @@ module.exports = {
   images: {
     domains: ["avatars.githubusercontent.com"],
   },
+  env: {
+    BASE_URL: process.env.BASE_URL,
+  },
 };
+

@@ -1,12 +1,12 @@
-
 import LoginComponent from "@/components/login-compoent";
+
+
 const LoginPage = () => {
- 
-    return (
+  return (
     <div className="sm:h-[50vh] h-[45vh] flex justify-center items-center">
-      <LoginComponent/>
+      <LoginComponent />
     </div>
-  )
+  );
 };
 
 export default LoginPage;
