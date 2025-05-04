@@ -45,8 +45,11 @@ const LinkPreviewComponent = ({
         {click ?<MdOutlineDone /> : <MdOutlineContentCopy onClick={copiedToClipboard} className="cursor-pointer"/>}
         </div>
         <div className="flex items-center justify-between mt-2">
-        <CardDescription className="overflow-hidden text-ellipsis">
+        <CardDescription className=" sm:block hidden overflow-hidden text-ellipsis">
           {link.length > 40 ? `${link.slice(0, 40)}...` : link}
+        </CardDescription>
+        <CardDescription className=" sm:hidden block overflow-hidden text-ellipsis">
+          {link.length > 20 ? `${link.slice(0, 20)}...` : link}
         </CardDescription>
         <a href={link} target="_blank">
         <MdOutlineOpenInNew />

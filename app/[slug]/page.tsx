@@ -2,17 +2,13 @@
 import { client } from "@/app/lib";
 import { redirect } from "next/navigation";
 
-interface SlugPageInterface{
-    params:{
-        slug:string
-    }
-}
-const SlugPage = async({
-    params
-}:SlugPageInterface) => {
+// interface SlugPageInterface{
+//     params:{ params: Promise<{ slug: string }>}
+// }
+const SlugPage = async({ params }: { params: Promise<{ slug: string }> }) => {
     
     
-    const {slug}=await params
+    const slug=(await params).slug
     const link=await redirectFun(slug);
     if(link==false){
         return(
