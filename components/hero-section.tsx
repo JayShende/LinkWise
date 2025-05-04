@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 import { LiaUnlinkSolid } from "react-icons/lia";
 import UrlInput from "./url-input";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 const poppinsFont = Poppins({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
