@@ -26,3 +26,15 @@ export const shortenLink=async(urlInput:string)=>{
     })
     return response.data
 }
+
+export const deleteUrlCard=async(id:number)=>{
+    const response=await axios({
+        method:"post",
+        url:"/api/v1/deleteUrl",
+        data:{
+            id:id
+        }
+    })
+
+    return response.data
+}

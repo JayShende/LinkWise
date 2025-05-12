@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
   const userId = session?.user?.id;
   const body = await req.json();
   const url = body.url;
-  console.log(url);
+  // console.log(url);
   const slug = nanoid(5);
   let user;
   try {
@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
         userId: userId,
       },
     });
-    console.log(user);
+    // console.log(user);
   } catch {
     return NextResponse.json({
       message: "Some Error",

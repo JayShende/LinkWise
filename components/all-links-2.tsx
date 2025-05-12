@@ -20,6 +20,7 @@ const AllLinksComponent2 = () => {
         <LinkPreviewComponent
           slug={x.slug}
           link={x.link}
+          id={x.id}
           key={x.id || x.slug} // Use a unique key!
         />
       ))}

@@ -13,7 +13,7 @@ export async function POST() {
     }
 
     const userId=session?.user?.id;
-    console.log(userId);
+    // console.log(userId);
 
     // fetching data 
     let datafetched;
