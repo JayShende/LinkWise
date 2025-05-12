@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export type LinkData = {
+export interface LinkData  {
   id: number;
   link: string;
   slug: string;

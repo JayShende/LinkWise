@@ -38,6 +38,6 @@ export async function POST() {
         link,
         slug,
     }));
-    return NextResponse.json({ data: filteredData });
+    return NextResponse.json(filteredData);
         
 }
