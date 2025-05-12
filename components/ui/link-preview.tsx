@@ -21,7 +21,6 @@ const LinkPreviewComponent = ({
 
   function copiedToClipboard(){
     handleCopy();
-    console.log(slugUrl);
     toast("LinkWise URL Copied");
     setClicked(true);
     setTimeout(()=>{
