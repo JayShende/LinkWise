@@ -24,7 +24,7 @@ const AllLinksComponent2 = () => {
         />
       ))}
 
-      {JSON.stringify(getLinks.data)}
+    
     </div>
   );
 };
